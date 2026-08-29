@@ -16,8 +16,8 @@ module pwm_gen #(
     always @(*) begin
         case (fan_level)
             2'd3: thresh = PERIOD;
-            2'd2: thresh = (PERIOD * 80) / 100;
-            2'd1: thresh = (PERIOD * 50) / 100;
+            //2'd2: thresh = (PERIOD * 80) / 100;
+            2`d2: thresh = (PERIOD * 50) / 100;
             default: thresh = {CW{1'b0}};
         endcase
     end
